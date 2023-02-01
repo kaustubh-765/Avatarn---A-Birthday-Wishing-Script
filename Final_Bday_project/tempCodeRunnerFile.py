@@ -1,0 +1,1 @@
+ the_email, the_letter =  self.letter(new_df, i=i)
