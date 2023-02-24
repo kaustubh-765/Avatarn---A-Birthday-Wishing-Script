@@ -6,11 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy Birthday</title>
   <style>
+    *{
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
     .container{
       max-width: 800px;
       margin: 2rem auto;
       font-family:'Times New Roman', Times, serif;
       border-style: groove;
+    }
+    h1{
+      text-align: center;
     }
     p{
       letter-spacing: 1px;
@@ -25,10 +33,39 @@
     .regards{
       margin: 2rem;
     }
+    header{
+      position: relative;
+    }
+    header > h1{
+      transform: translateY(1rem);
+    }
+    header > img{
+      width: 7rem;
+      position: absolute;
+      top:1rem;
+      right: 2.5rem;
+      transform: translateY(-.5rem);
+    } 
+    footer{
+      position: relative;
+    }
+    footer > img{
+      position: absolute;
+      width:2rem;
+      bottom: .25rem;
+      left: 29%;
+    }
+    footer>p{
+      text-align: center;
+    }
   </style>
 </head>
 <body>
   <div class="container">
+    <header>
+      <h1>Birthday Wishes</h1>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Logo-LNMIIT.svg/1200px-Logo-LNMIIT.svg.png " alt="lnmiit logo"> 
+    </header>
     <div class="salutation">Dear [NAME],</div>
     <p class="content">We value your special day just as much as we value you. On your birthday, we send you our warmest and most heartfelt wishes.<br><br> 
   
@@ -39,7 +76,10 @@
       Happy Birthday [FNAME]
     </p>
     <div class="regards">Regards, <br>LNMIIT Family</div>
-    
+    <footer> 
+      <img src="https://seeklogo.com/images/G/google-developers-logo-F8BF3155AC-seeklogo.com.png" alt="gdsc logo">
+      <p>An Initiative by GDSC, LNMIIT</p>
+    </footer>
 </div>
 </body>
 </html>
