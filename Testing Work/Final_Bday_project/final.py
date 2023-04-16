@@ -19,13 +19,19 @@ class Email:
             # reading the file
             letter_contents = letter_file.read()
             # replace [NAME] with actual name on the data
+            print(letter_contents)
             if len(new_df["name"]) > 1:
                 name = new_df['salutation'] + " " + new_df["name"]
-                the_letter = letter_contents.replace("[NAME]", name)
+                the_letter = letter_contents.replace("[NAME]", name).replace("[FNAME]", (new_df["name"].split())[0])
                 the_email = new_df["email"]
             else:
-                the_letter = letter_contents.replace("[NAME]", new_df["name"].item())
+                the_letter = letter_contents.replace("[NAME]", new_df["name"].item()).replace("[FNAME]", new_df["name"].item())
                 the_email = new_df["email"].item()
+
+            print("\n\n\n\n")
+            print(the_letter)
+
+            print(the_email)
 
         return the_email, the_letter, name
 
@@ -39,7 +45,7 @@ class Email:
                     msg = MIMEText(the_letter, 'html')
                     msg["From"] = "21ucs108@lnmiit.ac.in"
                     msg["To"] = the_email
-                    msg["Subject"] = "Happy Birthday " + name + "!!"
+                    msg["Subject"] = "Happy Birthday " + name 
 
                     con.send_message(msg)
                     con.quit()
