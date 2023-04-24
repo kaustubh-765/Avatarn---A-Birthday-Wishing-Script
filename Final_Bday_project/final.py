@@ -73,7 +73,7 @@ class Email:
 
                     # Finalizing the structure of the E-Mail 
                     msg = MIMEText(the_letter, 'html')
-                    msg["From"] = "21ucs108@lnmiit.ac.in"
+                    msg["From"] = "sender_mail@xyz.com"
                     msg["To"] = the_email
                     msg["Subject"] = "Happy Birthday " + name 
 
@@ -105,9 +105,9 @@ if (__name__ == "__main__"):
 
 
     # Define filepath for Students file, Faculties and NTS Employees
-    filepath_1 = 'Student_List.xlsx'
-    filepath_2 = 'Faculty_Employees_List.xlsx'
-    filepath_3 = 'NTS_Employees_List.xlsx'
+    filepath_1 = 'Excel_file_1.xlsx'
+    filepath_2 = 'Excel_file_2.xlsx'
+    filepath_3 = 'Excel_file_3.xlsx'
 
     # Load Excel file using Pandas
     f1 = pd.ExcelFile(filepath_1)
@@ -175,8 +175,8 @@ if (__name__ == "__main__"):
     list_date = data.loc[data['Birth_Date'] == current_date]
 
     # Gmail App Login Credentials 
-    GMUSER = 'greetings@lnmiit.ac.in'
-    GMPASS = 'jpdmhojjkvxjaovk'
+    GMUSER = ''
+    GMPASS = ''
 
     # Creating Object for the Class
     em = Email(gmail_username=GMUSER,gmail_password=GMPASS)
