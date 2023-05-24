@@ -6,10 +6,10 @@ import os
 # os.mkdir("testing") 
 
 # Enter your authentication details
-GMAIL_ID = '21ucs108@lnmiit.ac.in'
+GMAIL_ID = ''
 #'tester.you256@gmail.com'
 #'testing.you758@gmail.com'
-GMAIL_PSWD = 'I@mwea1thyforever99'
+GMAIL_PSWD = ''
 
 
 #qwe!@#asd!@#
