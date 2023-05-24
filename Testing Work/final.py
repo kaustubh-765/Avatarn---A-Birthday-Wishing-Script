@@ -37,7 +37,7 @@ class Email:
                     con.login(user=self.gmail_username, password=self.gmail_password)
 
                     msg = MIMEText(the_letter, 'html')
-                    msg["From"] = "21ucs108@lnmiit.ac.in"
+                    msg["From"] = ""
                     msg["To"] = the_email
                     msg["Subject"] = "Happy Birthday " + name + "!!"
 
@@ -85,8 +85,8 @@ if (__name__ == "__main__"):
 
     #print(new_df)
 
-    GMUSER = '21ucs108@lnmiit.ac.in'
-    GMPASS = 'whlgpfhevgslisbi'
+    GMUSER = ''
+    GMPASS = ''
 
     em = Email(gmail_username=GMUSER,gmail_password=GMPASS)
 
